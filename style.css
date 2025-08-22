@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+
+:root{
+  --bg: #f9fafc;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --text: #1f2937;
+  --primary: #4f46e5;
+  --accent: #10b981;
+  --danger: #ef4444;
+  --ring: rgba(79,70,229,0.25);
+  --shadow: 0 8px 24px rgba(0,0,0,.08);
+}
+
+html, body, .stApp {
+  background: radial-gradient(1200px 600px at 20% -10%, #e0e7ff 0%, transparent 60%),
+              radial-gradient(1000px 600px at 120% 0%, #d1fae5 0%, transparent 60%), 
+              var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+
+.block-container{
+  padding-top: 2.2rem;
+  max-width: 880px;
+}
+
+
+.app-title{
+  font-size: 2.1rem;
+  font-weight: 700;
+  letter-spacing: .2px;
+  margin: 0 0 .25rem 0;
+  background: linear-gradient(90deg, #4f46e5, #10b981);
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent;
+}
+.app-sub{
+  color: var(--muted);
+  margin-bottom: 1.4rem;
+}
+
+
+.card{
+  background: var(--card);
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: var(--shadow);
+  border-radius: 18px;
+  padding: 16px 16px 12px;
+}
+
+
+[data-testid="stFileUploadDropzone"]{
+  border: 1.5px dashed rgba(0,0,0,0.15);
+  border-radius: 16px !important;
+  background: rgba(255,255,255,0.8);
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+[data-testid="stFileUploadDropzone"]:hover{
+  border-color: var(--primary);
+  background: rgba(79,70,229,0.05);
+}
+[data-testid="stFileUploadDropzone"] p{
+  color: var(--muted) !important;
+}
+
+
+[data-testid="stCameraInput"] video, 
+[data-testid="stCameraInput"] img{
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+
+[data-testid="stImage"] img{
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+
+[data-testid="stSpinner"]{
+  color: var(--primary) !important;
+}
+[data-testid="stSpinner"] div{
+  filter: drop-shadow(0 6px 12px rgba(79,70,229,.15));
+}
+
+
+.pred-title{
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: .6rem;
+  color: var(--text);
+}
+
+
+.badge{
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-weight: 600;
+  background: rgba(79,70,229,.08);
+  border: 1px solid rgba(79,70,229,.25);
+  color: var(--primary);
+}
+
+
+.prob{
+  margin-top: .25rem;
+}
+.prob-row{
+  margin: 8px 0 10px;
+}
+.prob-label{
+  font-size: .95rem;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+.prob-bar{
+  height: 9px;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.05);
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.04);
+}
+.prob-fill{
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+}
+
+
+.tip{
+  color: var(--muted);
+  font-size: .92rem;
+  margin-top: 10px;
+}
